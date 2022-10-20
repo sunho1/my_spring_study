@@ -32,7 +32,7 @@ public class ApplicationiContextInfoTest {
             BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
 
             //기존에 등록된 것이 아니라, 사용하기 위해서 만든 것이라는 의미 or 외부 라이브러리
-            if(beanDefinition.getRole()==BeanDefinition.ROLE_APPLICATION){
+            if(beanDefinition.getRole()==BeanDefinition.ROLE_INFRASTRUCTURE){
                 Object bean = ac.getBean(beanDefinitionName);
                 System.out.println("name = "+beanDefinitionName+", object = "+bean);
             }
